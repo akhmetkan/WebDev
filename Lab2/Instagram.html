@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #curve-form1 {
+                border-bottom: 1px solid #dddfe2;
+                font-size: 5px;
+                margin-bottom: 8px;
+                width:30%;
+                text-align: left;
+            }
+            #curve-form2 {
+                border-bottom: 1px solid #dddfe2;
+                font-size: 5px;
+                margin-bottom: 8px;
+                width:30%;
+                text-align: right;
+            }
+            #curve-form {
+                margin-left: 18px ;
+                margin-right: 18px;
+            }
+            .--or--{
+                display: flex;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 17px;
+                
+                color: rgb(165, 165, 165);
+                position: relative;
+                bottom:13px;
+                left:33px;      
+                    }
+            #form1, #form2{
+                text-align: center;
+            }
+            .right-part, .left-part{
+                display:inline-block;
+            }
+            .right-part{
+                text-align: center;
+                position: relative;
+                left: 380px;
+                top:25px;
+            }
+            .left-part{
+                position: relative;
+                left:350px;
+                top: 34px;
+            }
+            .footer{
+                position: relative;
+                top:100px;
+                text-align: center;
+                height: 130px;
+            }
+            .rus, .select_lang, .inst2021{
+                display:inline-block;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                color: rgb(160, 160, 160);
+            }
+            .select_lang{
+                margin-right: 5px;
+            }
+            .inst2021{
+                margin-left: 5px;
+            }
+            select{
+                
+                cursor: pointer;
+                height: 100%;
+                left: 0;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left:679px;
+                width: 2px;
+                border-color: white;
+            }
+            .main-links a{
+                text-decoration: none;
+                color: rgb(160, 160, 160);
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+            .main-links{
+                line-height: 20px;
+            }
+            .languages-and-2021{
+                position: relative;
+                top:20px;
+                margin-bottom: 50px;
+            }
+            
+            #facebook-icon{
+                width: 20px;
+                position: relative;
+                top:5px;
+            }
+            #ios-img, #playmarket-img{
+                width: 133px;
+            }
+            #inst-logo{
+                margin-top: 20px;
+                margin-bottom: 24px;
+            }
+            input{
+                width:248px;
+                height:35px;
+                margin-bottom: 8px;
+                font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                color: rgba(160, 160, 160, 0.705);
+                border-color:  rgba(230, 230, 230, 0.459);
+                border-radius: 3px;
+                border-style:groove;
+                
+            }
+            #vhod {
+                width:254px;
+                height:30px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.884);
+                font-size: 13.5px;
+                font-weight: bold;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                background-color: rgba(124, 196, 245, 0.692);
+                border:none;
+                border-radius: 3px;
+                position: relative;
+                bottom:12px;
+            }
+            #facebook-vhod{
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+                
+            }
+            #forg-password{
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                position: relative;
+                top:20px;
+            }
+            #forg-password a{
+                color:rgb(95, 106, 141);
+            }
+            #facebook-vhod a{
+                color:rgb(95, 106, 141);
+            }
+            #fieldset-2 a{
+                color:rgb(92, 128, 245);
+                font-weight: bold;
+            }
+            .ustanovka{
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+            }
+            #form1, #form2{
+                border:none;
+            }
+            #form1{
+                margin-bottom: 10px;
+            }
+            a{
+                text-decoration: none;
+            }
+            
+            #authorisation{
+                border-color: rgba(207, 207, 207, 0.315);
+                width: 320px;
+                height: 358px;
+            }
+            #fieldset-2{
+                border-color: rgba(207, 207, 207, 0.315);
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left-part">
+            <img class="RP4i1  " src="https://i.ibb.co/8PHdJ0b/inst.jpg" alt="">
+        </div>
+        <div class="right-part">
+            <form id="form1">
+                <fieldset id="authorisation">
+                    <img id="inst-logo"src="https://i.ibb.co/1ZdbVsX/inst-logo.jpg" alt="inst-logo"><br>
+                
+                    <input id="email" type="text" placeholder="Номер телефона, имя пользователя или электронная почта"><br>
+                    <input id="password" type="password" placeholder="Пароль"> <br><br>
+                    
+                    <button id="vhod">Войти</button> <br><br>
+
+                    <div class="--or--">
+                        <div  id='curve-form1'></div>
+                        <div id='curve-form'>или</div>
+                        <div id='curve-form2'></div>
+                    </div>
+
+                    
+                    <div id="facebook-vhod"> 
+                        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522x4ioxs1etsncxs5wu8kvxpd1yi827fr1v5uple9a552j1ds8cw6%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dru_RU%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D6b9aec37-7bb9-43fb-8381-09ea42ec5493%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522x4ioxs1etsncxs5wu8kvxpd1yi827fr1v5uple9a552j1ds8cw6%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%23_%3D_&display=page&locale=ru_RU&pl_dbl=0">
+                            <span><img id="facebook-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/512px-Facebook_F_icon.svg.png"></span>
+                            <span>Войти через Facebook</span>
+                        </a> 
+                    </div>
+                    <div id="forg-password">
+                        <a href="/accounts/password/reset/" tabindex="0">Забыли пароль?</a>
+                    </div>
+                    
+                </fieldset>
+            </form>
+            <form id="form2">
+                <fieldset id="fieldset-2">
+                    <p>У вас еще нет аккаунта? <a href="https://www.instagram.com/accounts/emailsignup/">Зарегистрироваться</a></p>
+                </fieldset>
+            </form>
+            <div class="ustanovka">
+                <p>Установите приложение.</p>
+                <div>
+                    <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img id="ios-img" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_russian-ru.png/bfba6d0fd6bd.png"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DFF91723B-5F4D-4282-A80A-AEC0E7834ECD%26utm_content%3Dlo%26utm_medium%3Dbadge"><img id="playmarket-img"src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_russian-ru.png/4c70948c09f3.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="main-links">
+                <div id="1-line">
+                    <a href="https://about.instagram.com">Информация</a>
+                    <a href="https://about.instagram.com/blog">Блог</a>
+                    <a href="https://about.instagram.com/about-us/careers">Вакансии</a>
+                    <a href="https://help.instagram.com">Помощь</a>
+                    <a href="https://www.instagram.com/developer/">API</a>
+                    <a href="https://help.instagram.com/519522125107875">Конфеденциальность</a>
+                    <a href="https://help.instagram.com/581066165581870">Условия</a>
+                    <a href="https://www.instagram.com/directory/profiles/">Популярные аккаунты</a>
+                    <a href="https://www.instagram.com/directory/hashtags/">Хэштеги</a>
+                    <a href="https://www.instagram.com/explore/locations/">Места</a>
+                </div>
+                <div id="2-line">
+                    <a href="https://www.instagram.com/topics/beauty/">Красота</a>
+                    <a href="https://www.instagram.com/topics/dance-and-performance/">Танцы и выступлнеия</a>
+                    <a href="https://www.instagram.com/topics/fitness/">Фитнес</a>
+                    <a href="https://www.instagram.com/topics/food-and-drink/">Еда и напитки</a>
+                    <a href="https://www.instagram.com/topics/home-and-garden/">Дом и сад</a>
+                    <a href="https://www.instagram.com/topics/music/">Музыка</a>
+                    <a href="https://www.instagram.com/topics/visual-arts/">Изобразительное искусство</a>
+                </div>
+            </div>
+            <div class="languages-and-2021">
+                <div class="rus">
+                    <span>Русский</span>
+                </div>
+                <div class="select_lang">
+                    <select>
+                    <option value="" hidden disabled selected></option>
+                    <option>Afrikaans</option>
+                    <option>Čeština</option>
+                    <option>Dansk</option>
+                    <option>Deutsch</option>
+                    <option>Ελληνικά</option>
+                    <option>English</option>
+                    <option>English (UK)</option>
+                    <option>Español (España)</option>
+                    <option>Español</option>
+                    <option>Suomi</option>
+                    <option>Français</option>
+                    <option>Bahasa Indonesia</option>
+                    <option>Italiano</option>
+                    <option>日本語</option>
+                    <option>한국어</option>
+                    <option>Bahasa Melayu</option>
+                    <option>Norsk</option>
+                    <option>Nederlands</option>
+                    <option>Polski</option>
+                    <option>Português (Brasil)</option>
+                    <option>Português (Portugal)</option>
+                    <option>Русский</option>
+                    <option>Svenska</option>
+                    <option>ภาษาไทย</option>
+                    <option>Filipino</option>
+                    <option>Türkçe</option>
+                    <option>中文(简体)</option>
+                    <option>中文(台灣)</option>
+                    <option>বাংলা</option>
+                    <option>ગુજરાતી</option>
+                    <option>हिन्दी</option>
+                    <option>Hrvatski</option>
+                    <option>Magyar</option>
+                    <option>ಕನ್ನಡ</option>
+                    <option>മലയാളം</option>
+                    <option>मराठी</option>
+                    <option>नेपाली</option>
+                    <option>ਪੰਜਾਬੀ</option>
+                    <option>සිංහල</option>
+                    <option>Slovenčina</option>
+                    <option>தமிழ்</option>
+                    <option>తెలుగు</option>
+                    <option>Tiếng Việt</option>
+                    <option>中文(香港)</option>
+                    <option>Български</option>
+                    <option>Français (Canada)</option>
+                    <option>Română</option>
+                    <option>Српски</option>
+                    <option>Українська</option>
+                    </select>
+                </div>
+                <div class="inst2021">
+                    © Instagram от Facebook, 2022
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
