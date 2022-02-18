@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            #header{
+                background-color: rgba(0, 0, 0, 0.904);
+                height: 60px;
+                position: relative;
+                right:8px;
+                bottom: 20px;
+                width: 101.1%;
+               
+            }
+            #header p{
+                color:rgb(133, 132, 132);
+                font-family: sans-serif;
+                position: relative;
+                left:60px;
+                top:20px;
+                font-size: 20px;
+            }
+            #main-body{
+                text-align: center;
+            }
+            #main-body p{
+                font-size: 30px;
+                font-family: sans-serif;
+                color: rgba(0, 0, 0, 0.904);
+                position: relative;
+                right:250px;
+            }
+            
+            .inp_new_task{
+                width: 420px;
+                border-radius: 4px;
+                border-style: double;
+                border-color: rgba(141, 141, 141, 0.589);
+                height: 22px;
+                padding-left: 10px;
+            }
+            .button_add{
+                cursor: pointer;
+                position: relative;
+                left: 20px;
+                background-color: rgba(72, 120, 192, 0.945);
+                border-radius: 4px ;
+                height: 27px;
+                width:40px;
+                border: none;
+                padding: 5px;
+                color: rgba(255, 255, 255, 0.774);
+            }
+            .button_add:hover{
+                background: rgba(155, 175, 204, 0.945);
+            }
+            
+            
+            .check{
+                text-decoration: line-through;
+            }
+            .myList{
+                position:relative;
+                left:390px;
+            }
+            .LList{
+                list-style: none;
+            }
+            .todo{
+                position: relative;
+                top: 25px;
+                width:620px;
+                height: 53px;
+                background:none;
+                border-style:solid;
+                border-width: 1px;
+                border-radius: 3px;
+                border-color:  rgba(141, 141, 141, 0.589);
+                font-family: sans-serif;
+                color: black;
+
+            }
+            .todo li{
+                position: relative;
+                left: 75px;
+                top:19px;
+            }
+            .complete-btn{
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+                position: relative;
+                left: 15px;
+                bottom: 1px;
+            }
+            
+            .trash-btn{
+                cursor: pointer;
+                position: relative;
+                left: 558px;
+                bottom:2px;
+
+            }
+            .completed{
+                text-decoration: line-through;
+            }
+            .completed .complete-btn::after{
+                border: 3px solid blue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <p>ToDo List</p>
+        </div>
+
+        <div id="main-body">
+            <p>ToDo List</p>
+            <input class="inp_new_task" type="text" placeholder="New Task">
+            <button class="button_add">Add</button>
+            <i class = "fas fa-check"></i>
+        </div>
+
+        <div class="myList">
+            <ul class="LList">
+            </ul>
+        </div>
+
+        <script>
+            const doInput = document.querySelector(".inp_new_task");
+            const doButton = document.querySelector(".button_add");
+            const doList = document.querySelector(".LList");
+
+            doButton.addEventListener('click', addTodo);
+            doList.addEventListener('click', deleteCheck);
+
+
+            function addTodo(event){
+                event.preventDefault();
+
+                const todoDiv = document.createElement('div');
+                todoDiv.classList.add("todo");
+
+                const newTodo = document.createElement('li');
+                newTodo.innerText = doInput.value;
+                newTodo.classList.add('todo-item');
+                todoDiv.appendChild(newTodo);
+
+                const completedButton = document.createElement('input');
+                completedButton.type = "checkbox"
+                completedButton.innerHTML = '<i class = "fas fa-check"></i>';
+                completedButton.classList.add("complete-btn");
+                todoDiv.appendChild(completedButton);
+                
+                const trashButton = document.createElement('img');
+                trashButton.src="https://i.ibb.co/XFyQhmf/trash-10-16.gif";
+                trashButton.innerHTML = '<i class = "fas fa-check"></i>';
+                trashButton.classList.add("trash-btn");
+                todoDiv.appendChild(trashButton);
+
+                doList.appendChild(todoDiv);
+
+                doInput.value = "";
+            }
+
+            function deleteCheck(e){
+                const item = e.target;
+                if (item.classList[0] === "trash-btn"){
+                    const todo = item.parentElement;
+                    todo.remove();
+                }
+                if (item.classList[0] === "complete-btn"){
+                    const todo = item.parentElement;
+                    todo.classList.toggle("completed");
+                }
+            }
+        </script>
+    </body>
+</html>
